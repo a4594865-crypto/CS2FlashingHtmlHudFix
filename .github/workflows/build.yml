@@ -22,11 +22,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # 2. Configura o ambiente .NET. A versão foi ajustada para 8.0, conforme seu arquivo .csproj.
+      # 2. Configura o ambiente .NET. (升級為 .NET 10 配合最新版 CSS)
       - name: Set up .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0'
+          dotnet-version: '10.0.x'
 
       # 3. Extrai a versão do plugin diretamente do arquivo FlashingHtmlHudFix.cs.
       # Isso evita que você tenha que atualizar a versão manualmente no workflow.
